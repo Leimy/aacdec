@@ -1,0 +1,60 @@
+</$objtype/mkfile
+
+LIB=libfaad.a$O
+
+OFILES=\
+	bits.$O\
+	cfft.$O\
+	common.$O\
+	decoder.$O\
+	drc.$O\
+	drm_dec.$O\
+	error.$O\
+	filtbank.$O\
+	hcr.$O\
+	huffman.$O\
+	ic_predict.$O\
+	is.$O\
+	lt_predict.$O\
+	mdct.$O\
+	mp4.$O\
+	ms.$O\
+	output.$O\
+	pns.$O\
+	ps_dec.$O\
+	ps_syntax.$O\
+	pulse.$O\
+	rvlc.$O\
+	sbr_dct.$O\
+	sbr_dec.$O\
+	sbr_e_nf.$O\
+	sbr_fbt.$O\
+	sbr_hfadj.$O\
+	sbr_hfgen.$O\
+	sbr_huff.$O\
+	sbr_qmf.$O\
+	sbr_syntax.$O\
+	sbr_tf_grid.$O\
+	specrec.$O\
+	ssr.$O\
+	ssr_fb.$O\
+	ssr_ipqf.$O\
+	syntax.$O\
+	tns.$O\
+
+CC=pcc
+CFLAGS=\
+	-I. \
+	-Iinclude \
+	-D_POSIX_SOURCE \
+	-D_BSD_EXTENSION \
+	-DHAVE_STDINT_H \
+	-DHAVE_STRING_H \
+	-DHAVE_MEMCPY \
+	-DHAVE_STDLIB_H \
+	-DNDEBUG \
+	-D__inline= \
+	'-DPACKAGE_VERSION="2.11.1"' \
+	-c \
+
+</sys/src/cmd/mklib

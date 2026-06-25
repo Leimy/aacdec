@@ -1,0 +1,18 @@
+AAC audio decoder for 9front
+============================
+
+Decodes AAC (ADTS) streams from stdin, writes s16 PCM to
+stdout via pcmconv.  Intended for internet radio streams.
+
+Requires FAAD2 (libfaad) source in the libfaad/
+subdirectory.  See SETUP for instructions.
+
+Usage:
+	hget http://stream.example.com/aac | audio/aacdec | audio/pcmconv -o s16c2r48000 > /dev/audio
+
+Building:
+	mk
+
+Installing:
+	mk install
+	(installs to /$objtype/bin/audio/aacdec)
