@@ -1502,21 +1502,15 @@ static void ps_mix_phase(ps_info *ps, qmf_t X_left[38][64], qmf_t X_right[38][64
                 if it is outside these boundaries, this is most likely an error. sanitize
                 it and try to process further. */
             if (ps->iid_index[env][bk] < -no_iid_steps) {
-                fprintf(stderr, "Warning: invalid iid_index: %d < %d\n", ps->iid_index[env][bk],
-                    -no_iid_steps);
                 ps->iid_index[env][bk] = -no_iid_steps;
                 abs_iid = no_iid_steps;
             } else if (ps->iid_index[env][bk] > no_iid_steps) {
-                fprintf(stderr, "Warning: invalid iid_index: %d > %d\n", ps->iid_index[env][bk],
-                    no_iid_steps);
                 ps->iid_index[env][bk] = no_iid_steps;
                 abs_iid = no_iid_steps;
             }
             if (ps->icc_index[env][bk] < 0) {
-                fprintf(stderr, "Warning: invalid icc_index: %d < 0\n", ps->icc_index[env][bk]);
                 ps->icc_index[env][bk] = 0;
             } else if (ps->icc_index[env][bk] > 7) {
-                fprintf(stderr, "Warning: invalid icc_index: %d > 7\n", ps->icc_index[env][bk]);
                 ps->icc_index[env][bk] = 7;
             }
 
